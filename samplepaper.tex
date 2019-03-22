@@ -1,0 +1,142 @@
+% This is samplepaper.tex, a sample chapter demonstrating the
+% LLNCS macro package for Springer Computer Science proceedings;
+% Version 2.20 of 2017/10/04
+%
+\documentclass[runningheads]{llncs}
+%
+\usepackage[utf8]{inputenc}
+\newtheorem{hypothesis}{Hypothesis}
+\usepackage{graphicx}
+% Used for displaying a sample figure. If possible, figure files should
+% be included in EPS format.
+%
+% If you use the hyperref package, please uncomment the following line
+% to display URLs in blue roman font according to Springer's eBook style:
+% \renewcommand\UrlFont{\color{blue}\rmfamily}
+
+\begin{document}
+%
+\title{ESE 2019 - Experiment Design}
+%
+%\titlerunning{Abbreviated paper title}
+% If the paper title is too long for the running head, you can set
+% an abbreviated paper title here
+%
+\author{Marco Mondini}
+%
+\authorrunning{M. Mondini}
+% First names are abbreviated in the running head.
+% If there are more than two authors, 'et al.' is used.
+%
+\institute{Universidad Politécnica de Madrid\\
+\email{marco.mondini@alumnos.upm.es}}
+%
+\maketitle              % typeset the header of the contribution
+%
+\begin{abstract}
+Software development teams deal on a daily base with decisions that can affect the project at different levels. Tools and practices to support the decision-making process have been addressed by the literature over the past decades. The Information Radiator is one of these tools adopted by practitioners, often in very customised shapes. Considering the context of software start-ups, where the development team works closely with the others, with this experiment I want to evaluate the effects on the decision-making process while using an Information Radiator meant for the development team and populated with non-technical information. Whether such kind of information (i) motivate the team and (ii) drive teams re-actions.
+
+\keywords{Information Radiator \and Startups \and Development Team \and Metrics}
+\end{abstract}
+%
+%-=
+%
+\section{Experiment formalisation}
+
+\begin{hypothesis}
+Team-, market- and finance-related information presented on an information radiator affects the motivation and the decisions of the development team as product related information do.
+\end{hypothesis}
+
+\begin{table}
+\caption{Experiment formalisation}\label{tab1}
+\begin{center}
+\begin{tabular}{p{6cm}|p{6cm}}
+\hline
+\hline
+\textbf{Factor} & Kind of information item\\
+\hline
+\textbf{Treatments} & Product (technical), Team, Market, Finance information\\
+\hline
+\textbf{Response Variables} & Team motivation, Number of decisions/actions based on the provided pieces of information\\
+\hline
+\textbf{Response Variables Measurements} & Motivation assessed with post-experiment self-evaluation\newline Desisions assessed through observations\\
+\hline
+\hline
+\end{tabular}
+\end{center}
+\end{table}
+
+
+\begin{center}
+\textbf{RQ1.} \textit{Does the kind of the information item affects the motivation\\ and decision-making of the development team?}
+\end{center}
+
+In order to answer this question, we can perform an experiment with four different groups, separating information items related to the product, also considered technical, from team-, market- and finance-related items.
+Two possible design applicable to this experiment can be within-subjects and between-subjects.
+
+\subsection{Between-subjects Design}
+
+While one of the general goals of this experiment is assessing the influence of non-technical metrics on the Development team, it would be interesting to start to scope down such differences and analyse more than technical vs non-technical. To this direction, a between-subjects design (Table \ref{tab2}) would allow us to properly control the environment and save resources to perform the experiment, by managing a single session. On the other side, assuming we would have a fixed population available, splitting it into four groups would decrease the number of subjects per group. However, because of the possibility to avoid practice-biases, by not allowing the groups to interacts with each other until the end of the session, this design seams to properly fit the experiment. In fact, the practice-biases are crucial in this study given the response variables related to \textit{motivation} and \textit{decision-making}.
+
+\begin{table}
+\caption{Design Table Between-subjects}\label{tab2}
+\begin{center}
+\begin{tabular}{p{3.7cm}|p{2cm}|p{2cm}|p{2cm}|p{2cm}}
+\hline
+\hline
+\textbf{1 Factor\newline4 Treatments} & \textbf{Group 1} & \textbf{Group 2} & \textbf{Group 3} & \textbf{Group 4}\\
+\hline
+\textbf{Session 1} & Product (technical) & Team & Market & Finance\\
+\hline
+\hline
+\end{tabular}
+\end{center}
+\end{table}
+
+\subsection{Within-subjects Design}
+
+As alternative to the between-subjects design we could perform the study on the same population repeatedly. In such within-subjects design we would have a single group and multiple sessions as can be seen in Table \ref{tab3}. This would increase the risk of introducing confounding variables. In particular, the design would be transparent to the subjects and we are measuring social aspects of the group. In this way we would be introducing threats to the validity, for example by the order of the treatments. Moreover, another negative note of this design would be the time necessary to perform it. The most appropriate population for the experiment is represented by the software development team of a company. This would require the company to invest the team in multiple sessions. To avoid this limitation we could redesign the experiment to perform each session with a different group, e.g. a different company team, going back to a between-subjects experiments with multiple sessions. Finally, even this option would lead to confounders.
+
+\begin{table}
+\caption{Design Table Within-subjects}\label{tab3}
+\begin{center}
+\begin{tabular}{p{6cm}|p{6cm}}
+\hline
+\hline
+\textbf{1 Factor\newline4 Treatments} & \textbf{Group 1}\\
+\hline
+\textbf{Session 1} & Product (technical)\\
+\hline
+\textbf{Session 2} & Team\\
+\hline
+\textbf{Session 3} & Market\\
+\hline
+\textbf{Session 4} & Finance\\
+\hline
+\end{tabular}
+\end{center}
+\end{table}
+
+In conclusion, the chosen design is a single session between-subjects experiment (Table \ref{tab2}) with a particular attention to the randomised assignment of the population to each group, in order to preserve internal validity.
+
+\section{Threats to validity}
+
+Time value of business metrics. (Conboy)
+
+Better fit of longitudinal study to observe the long term motivation \textsc{while we are observing immediate satisfaction more than motivation}.
+
+
+%
+% ---- Bibliography ----
+%
+% BibTeX users should specify bibliography style 'splncs04'.
+% References will then be sorted and formatted in the correct style.
+%
+% \bibliographystyle{splncs04}
+% \bibliography{mybibliography}
+%
+% \begin{thebibliography}{8}
+% \bibitem{ref_article1}
+% Author, F.: Article title. Journal \textbf{2}(5), 99--110 (2016)
+% \end{thebibliography}
+\end{document}
